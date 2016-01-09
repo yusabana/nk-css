@@ -1,8 +1,15 @@
 .global-nav
   background-color: $teal-300
 .global-nav__items
+  font-size: 0 /* display: inline-block にしている、hamlでので、font-sizeを0にしている */
+  box-sizing: border-box
 .global-nav__item
+  display: inline-block
+  width: 20%
 .global-nav__item-link
+  display: block
+  text-align: center
+  line-height: 44px
   background-color: $teal-300
   color: $white
   text-decoration: none
