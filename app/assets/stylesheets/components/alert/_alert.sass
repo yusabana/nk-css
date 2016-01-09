@@ -2,8 +2,25 @@
 .alert-background
   background-color: $black-dark
 
+  // top,left,right,leftをすべてゼロにすることでびよーんと引き伸ばしたものになる
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
 // アラート
 .alert
+  box-sizing: border-box
+
+  // 中央揃えにしている
+  position: fixed
+  left: 50%
+  top: 50%
+  margin-top: -160px   /* ネガティブマージンはずれている分半分をネガティブマージンで戻す */
+  margin-left: -240px
+  z-index: 1
+
   width: 480px
   height: 320px
   background-color: white
@@ -11,12 +28,21 @@
 
 // アラートのクローズ
 .alert__close
+  // 親要素のabsoluteからの位置になる
+  position: absolute
+  right: -20px
+  top: -20px
+  border-radius: 50%
+  text-align: center
+
   background-color: $grey-800
   width: 40px
   height: 40px
 .alert__close-icon
   font-size: 28px
   color: white
+
+  line-height: 40px // 行間を指定することでして中央寄せする
 
 .alert__header
   background-color: $red-400
@@ -33,6 +59,10 @@
   font-size: 24px
   font-weight: bold
   color: white
+
+  //文字間を8pxにしているけど一番右端の8px分はいらないのでindentしてずらしている
+  letter-spacing: 8px
+  text-indent: 8px
 
 .alert__body
   padding: 24px
