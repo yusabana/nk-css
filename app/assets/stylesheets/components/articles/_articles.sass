@@ -1,9 +1,27 @@
 .articles__items
+  /* ネガティブマージンを入れる一番左右の余白をなくす */
+  margin-left: -16px
+  margin-right: -16px
+
+  display: flex
+  flex-wrap: wrap
+
 .articles__item
   margin-bottom: 32px
+
+  width: 33.3%
+  padding-right: 16px
+  padding-left: 16px
+  box-sizing: border-box
+  flex: 33.3%
+
 .articles__item-image-container
   margin-bottom: 4px
+  position: relative  //relative にするもの
+
 .articles__item-image
+  width: 100%
+
 .articles__item-crerated-at
   background-color: $black-dark
   text-align: right
@@ -11,7 +29,77 @@
   padding-right: 8px
   color: $white
   font-size: 14px
+
+  position: absolute  //  absoluteにする こうしないとはまらないのはなぜか
+  bottom: 0
+  left: 0
+  right: 0
+
 .articles__item-title
   font-size: 18px
   font-weight: bold
   line-height: 1.4
+
+// floatを使った方法
+// .articles__items
+//   /* ネガティブマージン */
+//   margin-left: -16px
+//   margin-right: -16px
+//
+// .articles__item
+//   margin-bottom: 32px
+//
+//   float: left
+//   width: 33.3%
+//   padding-right: 16px
+//   padding-left: 16px
+//   box-sizing: border-box
+//
+// .articles__item-image-container
+//   margin-bottom: 4px
+//
+// .articles__item-image
+//   width: 100%
+//
+// .articles__item-crerated-at
+//   background-color: $black-dark
+//   text-align: right
+//   line-height: 24px
+//   padding-right: 8px
+//   color: $white
+//   font-size: 14px
+//
+// .articles__item-title
+//   font-size: 18px
+//   font-weight: bold
+//   line-height: 1.4
+
+// 高江洲版
+// .articles__items
+//
+// .articles__item
+//   display: inline-block
+//   width: 30%
+//   margin-right: 32px
+//   margin-bottom: 32px
+//
+// .articles__item-image-container
+//   margin-bottom: 4px
+//
+// .articles__item-image
+//   display: inline-block
+//   width: 100%
+//
+// .articles__item-crerated-at
+//   background-color: $black-dark
+//   text-align: right
+//   line-height: 24px
+//   padding-right: 8px
+//   color: $white
+//   font-size: 14px
+//
+// .articles__item-title
+//
+//   font-size: 18px
+//   font-weight: bold
+//   line-height: 1.4
